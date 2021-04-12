@@ -183,7 +183,10 @@ fig.show()
 
 # Observations
 1.Though the vaccination drive is going in its full pace but in most of the countries people are not fully vaccinated
+
 2.In North America and Europe Pfizer and Moderna is widely used
+
 3.The most used vaccine around the world is Pfizer/ BioNTech. Around 47.6% of the total vaccines used
 Indian Covaxin, Oxford/AstraZeneca comes at 10th with 0.933% market share.
+
 4.Though USA started in the second position but in terms of daily vaccinations USA is at the top now
