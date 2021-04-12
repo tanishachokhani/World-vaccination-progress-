@@ -5,6 +5,7 @@ import pandas as pd
 import matplotlib.pyplot as plt 
 import seaborn as sns 
 from sklearn.impute import SimpleImputer
+import plotly.express as px
 %matplotlib inline 
 #Importing_data 
 Vaccinations= pd. read_csv('country_vaccinations-4.csv')
@@ -51,6 +52,28 @@ total_vaccine.describe()
 
 vaccinations_daily=Vaccinations_na.groupby('country')['daily_vaccinations'].sum()
 vaccinations_daily.head()
+
+# Visualisations
+sns.heatmap(df.corr())
+plt.title('Corelation Heatmap')
+plt.yticks(rotation = 0);
+size(10,7)
+![Screen Shot 2021-04-12 at 9 32 33 PM](https://user-images.githubusercontent.com/82114061/114426366-a301a500-9bd7-11eb-9076-78ea33963247.png)
+
+fig = px.line(df, x = 'date', y ='daily_vaccinations', color = 'country')
+
+fig.update_layout(
+    title={
+            'text' : "Daily vaccination trend",
+            'y':0.95,
+            'x':0.5
+        },
+    xaxis_title="Date",
+    yaxis_title="Daily Vaccinations"
+)
+
+fig.show()
+![Screen Shot 2021-04-12 at 9 32 33 PM](https://user-images.githubusercontent.com/82114061/114426634-e3612300-9bd7-11eb-882a-1f4a23c29b7a.png)
 
 # Plotting a line_graph
 fig = plt.figure()
@@ -153,3 +176,12 @@ fig = px.choropleth(tdf,
 fig.show()
 ![image](https://user-images.githubusercontent.com/82114061/114319253-5c0ba500-9b2e-11eb-9993-45641170d86b.png)
 
+
+
+
+# Observations
+1.Though the vaccination drive is going in its full pace but in most of the countries people are not fully vaccinated
+2.In North America and Europe Pfizer and Moderna is widely used
+3.The most used vaccine around the world is Pfizer/ BioNTech. Around 47.6% of the total vaccines used
+Indian Covaxin, Oxford/AstraZeneca comes at 10th with 0.933% market share.
+4.Though USA started in the second position but in terms of daily vaccinations USA is at the top now
