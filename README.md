@@ -58,7 +58,8 @@ sns.heatmap(df.corr())
 plt.title('Corelation Heatmap')
 plt.yticks(rotation = 0);
 size(10,7)
-![Screen Shot 2021-04-12 at 9 32 33 PM](https://user-images.githubusercontent.com/82114061/114426366-a301a500-9bd7-11eb-9076-78ea33963247.png)
+![Picture11](https://user-images.githubusercontent.com/82114061/114426844-17d4df00-9bd8-11eb-9d89-51dd4fd3314b.png)
+
 
 fig = px.line(df, x = 'date', y ='daily_vaccinations', color = 'country')
 
@@ -73,7 +74,8 @@ fig.update_layout(
 )
 
 fig.show()
-![Screen Shot 2021-04-12 at 9 32 33 PM](https://user-images.githubusercontent.com/82114061/114426634-e3612300-9bd7-11eb-882a-1f4a23c29b7a.png)
+![Picture10](https://user-images.githubusercontent.com/82114061/114426895-26bb9180-9bd8-11eb-8f7e-126c60f61274.png)
+
 
 # Plotting a line_graph
 fig = plt.figure()
